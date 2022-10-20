@@ -1,0 +1,956 @@
+Starting experiment Test
+
+data for architecture search
+batch num of train: 50
+batch num of valid: 50
+data for architecture search
+batch num of train: 50
+batch num of valid: 50
+total num of test: 2500
+Train iteration 0 starts 
+
+current depth 0  after 4
+
+> training...
+
+---------- depth 0 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 0
+---- prog 0  :  Start
+---- subm program
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+
+
+---------- depth 1 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 1
+---- prog 0  :  and
+---- subm function1
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- subm function2
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- prog 1  :  or
+---- subm function1
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- subm function2
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- prog 2  :  affine
+
+---------- depth 2 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 2
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- subm function2
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- subm function2
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 2
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- subm function2
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+---- subm function2
+-- weight 0.0 | 0.3333333432674408  valid 1  : affine  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : and  | 
+-- weight 0.0 | 0.3333333432674408  valid 1  : or  | 
+
+
+---------- depth 3 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+-------- Node 2
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+-------- Node 3
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+
+---------- depth 4 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 2
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 3
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 4
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 5
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 6
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 7
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+number of architecture parameters 55
+number of model parameters 45
+ratio between arch/model parameter is: 1.2222222222222223
+learning rate: 0.1 | 0.1
+------------------------
+training epoch: 0
+architecture loss: 0.05106208769138902
+model loss: 0.0465165705839172
+Validation score is: 0.0119
+------------------------
+training epoch: 1
+architecture loss: 0.017252581289503723
+model loss: 0.01805292851757258
+Validation score is: 0.0102
+------------------------
+training epoch: 2
+architecture loss: 0.025591298888903113
+model loss: 0.023555440506897868
+Validation score is: 0.0223
+------------------------
+training epoch: 3
+architecture loss: 0.013021635868935845
+model loss: 0.017235692160902545
+Validation score is: 0.0084
+------------------------
+training epoch: 4
+architecture loss: 0.008491811623098328
+model loss: 0.01127491308739991
+Validation score is: 0.0129
+------------------------
+training epoch: 5
+architecture loss: 0.011967711129109375
+model loss: 0.012512541986070573
+Validation score is: 0.0120
+------------------------
+training epoch: 6
+architecture loss: 0.008758099846600089
+model loss: 0.009205957416561432
+Validation score is: 0.0043
+------------------------
+training epoch: 7
+architecture loss: 0.007138602634804556
+model loss: 0.006927417602855712
+Validation score is: 0.0093
+------------------------
+training epoch: 8
+architecture loss: 0.0094988406644552
+model loss: 0.010129099966288777
+Validation score is: 0.0144
+------------------------
+training epoch: 9
+architecture loss: 0.009967590641826974
+model loss: 0.01245033482366125
+Validation score is: 0.0077
+------------------------
+training epoch: 10
+architecture loss: 0.006044534234024468
+model loss: 0.0068795136088738214
+Validation score is: 0.0088
+------------------------
+training epoch: 11
+architecture loss: 0.009145833028087509
+model loss: 0.010937087148995488
+Validation score is: 0.0130
+------------------------
+training epoch: 12
+architecture loss: 0.008151327630694141
+model loss: 0.00787328265963879
+Validation score is: 0.0043
+------------------------
+training epoch: 13
+architecture loss: 0.004208648390449526
+model loss: 0.005194049761448696
+Validation score is: 0.0078
+------------------------
+training epoch: 14
+architecture loss: 0.007654477646756277
+model loss: 0.008944912934457533
+Validation score is: 0.0058
+------------------------
+training epoch: 15
+architecture loss: 0.005520685644078185
+model loss: 0.008622143757365848
+Validation score is: 0.0058
+------------------------
+training epoch: 16
+architecture loss: 0.005693260162479419
+model loss: 0.006231331174494699
+Validation score is: 0.0062
+------------------------
+training epoch: 17
+architecture loss: 0.0056153329643348114
+model loss: 0.0061105866904108555
+Validation score is: 0.0140
+------------------------
+training epoch: 18
+architecture loss: 0.006430097022239352
+model loss: 0.008449826526830293
+Validation score is: 0.0100
+------------------------
+training epoch: 19
+architecture loss: 0.008354430099570891
+model loss: 0.009658102126832092
+Validation score is: 0.0117
+------------------------
+training epoch: 20
+architecture loss: 0.006669000055262586
+model loss: 0.006746577436133521
+Validation score is: 0.0125
+------------------------
+training epoch: 21
+architecture loss: 0.005046185555529519
+model loss: 0.006396218189311184
+Validation score is: 0.0050
+------------------------
+training epoch: 22
+architecture loss: 0.010544400199996744
+model loss: 0.01090314207074698
+Validation score is: 0.0168
+------------------------
+training epoch: 23
+architecture loss: 0.009818714003267814
+model loss: 0.010078788105092827
+Validation score is: 0.0047
+------------------------
+training epoch: 24
+architecture loss: 0.010426205375806604
+model loss: 0.010595257154091087
+Validation score is: 0.0164
+------------------------
+training epoch: 25
+architecture loss: 0.00858197900088271
+model loss: 0.007467827034997754
+Validation score is: 0.0070
+------------------------
+training epoch: 26
+architecture loss: 0.008988233706404572
+model loss: 0.010385817193964612
+Validation score is: 0.0043
+------------------------
+training epoch: 27
+architecture loss: 0.0018285671076955622
+model loss: 0.0019546721285223613
+Validation score is: 0.0028
+------------------------
+training epoch: 28
+architecture loss: 0.003269389129927731
+model loss: 0.00375545413367945
+Validation score is: 0.0051
+------------------------
+training epoch: 29
+architecture loss: 0.003653171273545013
+model loss: 0.002619482578993484
+Validation score is: 0.0053
+------------------------
+training epoch: 30
+architecture loss: 0.00835403486058567
+model loss: 0.008966922271902149
+Validation score is: 0.0088
+------------------------
+training epoch: 31
+architecture loss: 0.006153020129331708
+model loss: 0.006569629405566957
+Validation score is: 0.0024
+------------------------
+training epoch: 32
+architecture loss: 0.00493485294176935
+model loss: 0.004779011296377576
+Validation score is: 0.0038
+------------------------
+training epoch: 33
+architecture loss: 0.005504058781552885
+model loss: 0.006923931365254248
+Validation score is: 0.0026
+------------------------
+training epoch: 34
+architecture loss: 0.003014903143121046
+model loss: 0.004146825616280694
+Validation score is: 0.0016
+------------------------
+training epoch: 35
+architecture loss: 0.008587457038820502
+model loss: 0.008638424331356873
+Validation score is: 0.0145
+------------------------
+training epoch: 36
+architecture loss: 0.012616952901480545
+model loss: 0.010708804747555405
+Validation score is: 0.0084
+------------------------
+training epoch: 37
+architecture loss: 0.004155902517782124
+model loss: 0.004481275776470284
+Validation score is: 0.0060
+------------------------
+training epoch: 38
+architecture loss: 0.003678055426607898
+model loss: 0.005510021834788858
+Validation score is: 0.0024
+------------------------
+training epoch: 39
+architecture loss: 0.004304491616221639
+model loss: 0.00450543937835846
+Validation score is: 0.0081
+------------------------
+training epoch: 40
+architecture loss: 0.005202970087229915
+model loss: 0.007084310621321492
+Validation score is: 0.0009
+------------------------
+training epoch: 41
+architecture loss: 0.002641560716983804
+model loss: 0.002988442853175002
+Validation score is: 0.0049
+------------------------
+training epoch: 42
+architecture loss: 0.005000251222372754
+model loss: 0.0060168115188525915
+Validation score is: 0.0037
+------------------------
+training epoch: 43
+architecture loss: 0.0022305665551630226
+model loss: 0.0018347833943607838
+Validation score is: 0.0088
+------------------------
+training epoch: 44
+architecture loss: 0.0072333285277545655
+model loss: 0.006234671586635159
+Validation score is: 0.0056
+------------------------
+training epoch: 45
+architecture loss: 0.004364433616292445
+model loss: 0.006607043646754391
+Validation score is: 0.0078
+------------------------
+training epoch: 46
+architecture loss: 0.0034139283862532465
+model loss: 0.004246227520106913
+Validation score is: 0.0010
+------------------------
+training epoch: 47
+architecture loss: 0.005385425139202198
+model loss: 0.005145555266126394
+Validation score is: 0.0025
+------------------------
+training epoch: 48
+architecture loss: 0.004498772518286387
+model loss: 0.005237392703047589
+Validation score is: 0.0025
+------------------------
+training epoch: 49
+architecture loss: 0.004246220181339595
+model loss: 0.003717719522010157
+Validation score is: 0.0037
+Validation score is: 0.0037
+
+---------- depth 0 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 0
+---- prog 0  :  Start
+---- subm program
+-- weight 3.511564254760742 | 0.9595063328742981  valid 1  : and  | 
+-- weight 0.2994427978992462 | 0.03864036500453949  valid 1  : or  | 
+-- weight -2.737851619720459 | 0.0018533652182668447  valid 1  : affine  | 
+
+
+---------- depth 1 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 1
+---- prog 0  :  and
+---- subm function1
+-- weight 3.477081537246704 | 0.9982230067253113  valid 1  : affine  | 
+-- weight -3.876530408859253 | 0.0006391377537511289  valid 1  : and  | 
+-- weight -3.299710988998413 | 0.0011378997005522251  valid 1  : or  | 
+
+---- subm function2
+-- weight 3.157538652420044 | 0.8895903825759888  valid 1  : affine  | 
+-- weight 1.0066958665847778 | 0.10353590548038483  valid 1  : and  | 
+-- weight -1.7055176496505737 | 0.006873716600239277  valid 1  : or  | 
+
+---- prog 1  :  or
+---- subm function1
+-- weight -2.271322011947632 | 0.003731194883584976  valid 1  : affine  | 
+-- weight 3.3102121353149414 | 0.990552544593811  valid 1  : and  | 
+-- weight -1.844726324081421 | 0.005716314539313316  valid 1  : or  | 
+
+---- subm function2
+-- weight -1.9180819988250732 | 0.005436706356704235  valid 1  : affine  | 
+-- weight 3.267322063446045 | 0.9712435007095337  valid 1  : and  | 
+-- weight -0.4619555175304413 | 0.023319724947214127  valid 1  : or  | 
+
+---- prog 2  :  affine
+
+---------- depth 2 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 2
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight -0.19378222525119781 | 0.10151708126068115  valid 1  : affine  | 
+-- weight 1.9641761779785156 | 0.8784733414649963  valid 1  : and  | 
+-- weight -1.8177987337112427 | 0.020009571686387062  valid 1  : or  | 
+
+---- subm function2
+-- weight 2.6012494564056396 | 0.9865351319313049  valid 1  : affine  | 
+-- weight -2.7217118740081787 | 0.004812601022422314  valid 1  : and  | 
+-- weight -2.1351242065429688 | 0.008652299642562866  valid 1  : or  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 1.3739333152770996 | 0.7350473403930664  valid 1  : affine  | 
+-- weight 0.21602235734462738 | 0.230909064412117  valid 1  : and  | 
+-- weight -1.6983598470687866 | 0.034043584018945694  valid 1  : or  | 
+
+---- subm function2
+-- weight -1.011254072189331 | 0.08804761618375778  valid 1  : affine  | 
+-- weight 1.0915019512176514 | 0.7209961414337158  valid 1  : and  | 
+-- weight -0.23708784580230713 | 0.19095619022846222  valid 1  : or  | 
+
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 2
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight -1.2451236248016357 | 0.011501448228955269  valid 1  : affine  | 
+-- weight 3.2022814750671387 | 0.9822814464569092  valid 1  : and  | 
+-- weight -1.8602888584136963 | 0.006217123009264469  valid 1  : or  | 
+
+---- subm function2
+-- weight -0.3929665684700012 | 0.031153054907917976  valid 1  : affine  | 
+-- weight 3.04134202003479 | 0.9660550951957703  valid 1  : and  | 
+-- weight -2.8051726818084717 | 0.0027918547857552767  valid 1  : or  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight -2.4725747108459473 | 0.003312203334644437  valid 1  : affine  | 
+-- weight 3.231574296951294 | 0.994025468826294  valid 1  : and  | 
+-- weight -2.6910269260406494 | 0.0026622232981026173  valid 1  : or  | 
+
+---- subm function2
+-- weight -1.6662888526916504 | 0.009338252246379852  valid 1  : affine  | 
+-- weight 2.9950759410858154 | 0.9878033995628357  valid 1  : and  | 
+-- weight -2.850151300430298 | 0.002858384046703577  valid 1  : or  | 
+
+
+---------- depth 3 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+-------- Node 2
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+-------- Node 3
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+
+---------- depth 4 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 2
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 3
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 4
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 5
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 6
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 7
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+
+
+
+Train iteration 0 time spend: 58.91002368927002 
+
+
+---------- depth 0 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 0
+---- prog 0  :  Start
+---- subm program
+-- weight 3.511564254760742 | 1.0  valid 1  : and  | 
+
+
+---------- depth 1 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 1
+---- prog 0  :  and
+---- subm function1
+-- weight 3.477081537246704 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 3.157538652420044 | 1.0  valid 1  : affine  | 
+
+
+---------- depth 2 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 2
+---- prog 0  :  affine
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 2
+---- prog 0  :  affine
+
+
+
+after search 
+
+learning rate: 0.02
+------------------------
+training epoch: 0
+Validation score is: 0.0010
+model loss: 0.000956236936224544
+validation metric: 0.0010155988857150078
+------------------------
+training epoch: 1
+Validation score is: 0.0013
+model loss: 0.0010981825862444242
+validation metric: 0.0012649544514715672
+------------------------
+training epoch: 2
+Validation score is: 0.0012
+model loss: 0.0010722084440742794
+validation metric: 0.001165970228612423
+------------------------
+training epoch: 3
+Validation score is: 0.0012
+model loss: 0.0010338873114986895
+validation metric: 0.001170319621451199
+------------------------
+training epoch: 4
+Validation score is: 0.0012
+model loss: 0.001022314136990867
+validation metric: 0.001179277547635138
+------------------------
+training epoch: 5
+Validation score is: 0.0012
+model loss: 0.0010171356736370207
+validation metric: 0.0011855392949655652
+finish train
+
+best epoch: 0
+time spend: 0.6682925224304199 
+
+
+---------- depth 0 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 0
+---- prog 0  :  Start
+---- subm program
+-- weight 3.511564254760742 | 0.9595063328742981  valid 1  : and  | 
+-- weight 0.2994427978992462 | 0.03864036500453949  valid 1  : or  | 
+-- weight -2.737851619720459 | 0.0018533652182668447  valid 1  : affine  | 
+
+
+---------- depth 1 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 1
+---- prog 0  :  and
+---- subm function1
+-- weight 3.477081537246704 | 0.9982230067253113  valid 1  : affine  | 
+-- weight -3.876530408859253 | 0.0006391377537511289  valid 1  : and  | 
+-- weight -3.299710988998413 | 0.0011378997005522251  valid 1  : or  | 
+
+---- subm function2
+-- weight 3.157538652420044 | 0.8895903825759888  valid 1  : affine  | 
+-- weight 1.0066958665847778 | 0.10353590548038483  valid 1  : and  | 
+-- weight -1.7055176496505737 | 0.006873716600239277  valid 1  : or  | 
+
+---- prog 1  :  or
+---- subm function1
+-- weight -2.271322011947632 | 0.003731194883584976  valid 1  : affine  | 
+-- weight 3.3102121353149414 | 0.990552544593811  valid 1  : and  | 
+-- weight -1.844726324081421 | 0.005716314539313316  valid 1  : or  | 
+
+---- subm function2
+-- weight -1.9180819988250732 | 0.005436706356704235  valid 1  : affine  | 
+-- weight 3.267322063446045 | 0.9712435007095337  valid 1  : and  | 
+-- weight -0.4619555175304413 | 0.023319724947214127  valid 1  : or  | 
+
+---- prog 2  :  affine
+
+---------- depth 2 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 2
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight -0.19378222525119781 | 0.10151708126068115  valid 1  : affine  | 
+-- weight 1.9641761779785156 | 0.8784733414649963  valid 1  : and  | 
+-- weight -1.8177987337112427 | 0.020009571686387062  valid 1  : or  | 
+
+---- subm function2
+-- weight 2.6012494564056396 | 0.9865351319313049  valid 1  : affine  | 
+-- weight -2.7217118740081787 | 0.004812601022422314  valid 1  : and  | 
+-- weight -2.1351242065429688 | 0.008652299642562866  valid 1  : or  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 1.3739333152770996 | 0.7350473403930664  valid 1  : affine  | 
+-- weight 0.21602235734462738 | 0.230909064412117  valid 1  : and  | 
+-- weight -1.6983598470687866 | 0.034043584018945694  valid 1  : or  | 
+
+---- subm function2
+-- weight -1.011254072189331 | 0.08804761618375778  valid 1  : affine  | 
+-- weight 1.0915019512176514 | 0.7209961414337158  valid 1  : and  | 
+-- weight -0.23708784580230713 | 0.19095619022846222  valid 1  : or  | 
+
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 2
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight -1.2451236248016357 | 0.011501448228955269  valid 1  : affine  | 
+-- weight 3.2022814750671387 | 0.9822814464569092  valid 1  : and  | 
+-- weight -1.8602888584136963 | 0.006217123009264469  valid 1  : or  | 
+
+---- subm function2
+-- weight -0.3929665684700012 | 0.031153054907917976  valid 1  : affine  | 
+-- weight 3.04134202003479 | 0.9660550951957703  valid 1  : and  | 
+-- weight -2.8051726818084717 | 0.0027918547857552767  valid 1  : or  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight -2.4725747108459473 | 0.003312203334644437  valid 1  : affine  | 
+-- weight 3.231574296951294 | 0.994025468826294  valid 1  : and  | 
+-- weight -2.6910269260406494 | 0.0026622232981026173  valid 1  : or  | 
+
+---- subm function2
+-- weight -1.6662888526916504 | 0.009338252246379852  valid 1  : affine  | 
+-- weight 2.9950759410858154 | 0.9878033995628357  valid 1  : and  | 
+-- weight -2.850151300430298 | 0.002858384046703577  valid 1  : or  | 
+
+
+---------- depth 3 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+-------- Node 2
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+-------- Node 3
+------ type sign contain ('atom', 'atom', 2, 1)    debug 3
+---- prog 0  :  affine
+---- prog 1  :  and
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- prog 2  :  or
+---- subm function1
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+---- subm function2
+-- weight 0.0 | 1.0  valid 1  : affine  | 
+
+
+---------- depth 4 ------------
+-------- Node 0
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 1
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 2
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 3
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 4
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 5
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 6
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+-------- Node 7
+------ type sign contain ('atom', 'atom', 2, 1)    debug 4
+---- prog 0  :  affine
+Best Program Found:
+Start(and(affine(), affine()))
+Finetune
+learning rate: 0.01
+------------------------
+training epoch: 0
+Validation score is: 0.0639
+model loss: 0.0008832941957633834
+validation metric: 0.06386066763425247
+------------------------
+training epoch: 1
+Validation score is: 0.0639
+model loss: 0.0004999934726099977
+validation metric: 0.06386066763425247
+------------------------
+training epoch: 2
+Validation score is: 0.0639
+model loss: 0.0005092173353162788
+validation metric: 0.06386066763425247
+------------------------
+training epoch: 3
+Validation score is: 0.0639
+model loss: 0.000544080814219764
+validation metric: 0.06386066763425247
+------------------------
+training epoch: 4
+Validation score is: 0.0639
+model loss: 0.0005523105025399446
+validation metric: 0.06386066763425247
+------------------------
+training epoch: 5
+Validation score is: 0.0639
+model loss: 0.0005496732143726531
+validation metric: 0.06386066763425247
+------------------------
+training epoch: 6
+Validation score is: 0.0639
+model loss: 0.0005480795615043316
+validation metric: 0.06386066763425247
+------------------------
+training epoch: 7
+Validation score is: 0.0639
+model loss: 0.000547924739479969
+validation metric: 0.06386066763425247
+------------------------
+training epoch: 8
+Validation score is: 0.0639
+model loss: 0.0005482843708969156
+validation metric: 0.06386066763425247
+------------------------
+training epoch: 9
+Validation score is: 0.0639
+model loss: 0.000548750355745125
+validation metric: 0.06386066763425247
+finish train
+
+best epoch: 9
+finetune time spend: 1.1687467098236084 
+
