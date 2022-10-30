@@ -1,5 +1,5 @@
 from __future__ import print_function
-from math import gcd
+import math
 from functools import reduce
 import os
 import sys
@@ -106,7 +106,7 @@ def parse_args():
                         help='whether use double for soft f1 loss')
     parser.add_argument('--class_weights', type=str, required=False, default = None,
                         help="weights for each class in the loss function, comma separated floats")
-    parser.add_argument('--topN_select', type=int, required=False, default=1,
+    parser.add_argument('--topN_select', type=int, required=False, default=2,
                         help="number of candidates remain in each search")
     parser.add_argument('--resume_graph', type=str, required=False, default=None,
                         help="resume graph from certain path if necessary")
@@ -318,7 +318,7 @@ if __name__ == '__main__':
         'penalty' : cmd_args.penalty,
         'secorder' : cmd_args.sec_order,
         'specific' : [#[None, 2, 0.01, 5], [4, 2, 0.01, 5], [3, 2, 0.01, 5], [2, 2, 0.01, 5], \
-                [None, max_depth, 0.1, 50]]#, ["astar", max_depth, 0.1, 5]]#, [4, 4, 0.01, 500], [3, 4, 0.01, 500], [2, 4, 0.01, 500]]#, ["astar", 4, 0.01, cmd_args.neural_epochs]]
+                [None, max_depth, 0.1, 10]]#, ["astar", max_depth, 0.1, 5]]#, [4, 4, 0.01, 500], [3, 4, 0.01, 500], [2, 4, 0.01, 500]]#, ["astar", 4, 0.01, cmd_args.neural_epochs]] todo: here is where the epochs are defined for the main training session
     }
 
     # Initialize program graph
@@ -350,15 +350,18 @@ if __name__ == '__main__':
         examples = holder.all_ces
         # train_data must be sorted by var_ids
         train_data, train_labels = [], []
-        #print("Examples are " + str(examples))
         #assert False
+        #print(examples)
+        #print(len(examples))
         for ex in examples:
             #print(ex.config)
-            item = [None] * len(vars)
-            for k in ex.config:
-                item[var_ids[k]] = float( ex.config[k] )
+            item = [float(ex.config['X']), float(ex.config['Y'])]
+            #item = [None] * len(vars)
+            #for k in ex.config: # problem with the implementation here - assymetry in the inputs as iterating through a dictionary is already unorder - have to fix this for later implmenetation
+                #item[var_ids[k]] = float( ex.config[k] )
                 #item[var_ids[k]] = 1. if ex.config[k] else 0.
             #print(str(item) + " " + str(var_ids))
+            print(item)
             train_data.append(item)
             if ex.kind == 'T':
                 train_labels.append([1.])
@@ -441,31 +444,33 @@ if __name__ == '__main__':
         best_program = best_program.submodules["program"]
         print("Now here is a preliminary printing of the program, ignoring the later stuff")
         def lcm(denominators):
-            return reduce(lambda a,b: a*b // gcd(a,b), denominators)
+            return reduce(lambda a,b: a*b // math.gcd(a,b), denominators)
         def printNumericalInvariant(parameters):
             return str(float(parameters["weights"][0][0].detach())) + "*X + " + str(float(parameters["weights"][0][1].detach())) + "*Y + " + str(float(parameters["bias"][0].detach())) + " > 0"
         def printNumericalInvariantSmoothed(params):
             parameters = (params["weights"][0].detach()).numpy()
-            biggest_weight = np.max(parameters)
-            new_weights = [float(params["bias"][0].detach())/biggest_weight] + [weight/biggest_weight for weight in parameters]
+            biggest_weight = abs(np.min(parameters))
+            bias = float(params["bias"][0].detach())/biggest_weight
+            new_weights = [weight/biggest_weight for weight in parameters]#[float(params["bias"][0].detach())/biggest_weight] + [weight/biggest_weight for weight in parameters]
             approximations = []
             for new_weight in new_weights:
                 closest_approx_values = (-100, -100)
                 closest_approx = 1000
                 for i in range(-5, 5): # K = 5 like in the paper
-                    for j in range(1,5):
-                        if (abs(new_weight - i/j) < closest_approx):
+                    for j in range(1,5): #K = 5
+                        if (abs(new_weight - i/j) < closest_approx and np.sign(new_weight) == np.sign(i)):
                             closest_approx = abs(new_weight - i/j)
                             closest_approx_values = (i,j)
                 approximations.append(closest_approx_values)
             least_common_multiple = lcm([frac[1] for frac in approximations])
             #print("approximations are " + str(approximations) + " and the lcm is " + str(least_common_multiple))
-            return str(least_common_multiple * approximations[1][0]/approximations[1][1]) + "*X + " + str(least_common_multiple * approximations[2][0]/approximations[2][1]) + "*Y + " + str(least_common_multiple * approximations[0][0]/approximations[0][1]) + " > 0"
+            return str(least_common_multiple * approximations[0][0]/approximations[0][1]) + "*X + " + str(least_common_multiple * approximations[1][0]/approximations[1][1]) + "*Y + " + str(math.ceil(least_common_multiple * bias)) + " > 0"
         def printProgram(program, smoothed=False):
             if program.name == "affine":
                 if smoothed:
                     print("(" + program.name + " " + printNumericalInvariantSmoothed(program.parameters))
                 else:
+                    print(program.parameters)
                     print("(" + program.name + " " + printNumericalInvariant(program.parameters))
             else:
                 print("(" + program.name)
