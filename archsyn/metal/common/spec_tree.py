@@ -100,12 +100,12 @@ class SpecTree:
         for x in range(-25, 25): # todo: change these to more inclusive ranges, DO THESE NEED TO BE FLOATS?
             for y in range(-25,25):
                 env = {'X': x, 'Y': y}                                                                          # in reverse order because I think the weights are coming out in the wrong order/ not sure why they're coming out in wrong order
-                res = ((-2)*x - y + 4 > 0) and (3*x - 4*y + 5> 0)#((x - 4*y - 9> 0) and (2*x - y - 9 > 0)) or (((-1)*x + y - 1 > 0) and (x + 2*y + 2 > 0)) #((-2)*x - y + 4 > 0) and (3*x - 4*y + 5> 0) #self.spec.eval_py(env) REPLACED HERE - DON'T WANT ORIGINAL SPECIFICATION
+                res = ((-4)*x - 2*y + 4 > 0) and ((-4)*x + 3*y +1> 0)#((-2)*x - 4*y + 4 > 0) and (3*x - 4*y +1> 0)#((x - 4*y - 9> 0) and (2*x - y - 9 > 0)) or (((-1)*x + y - 1 > 0) and (x + 2*y + 2 > 0)) #((-2)*x - y + 4 > 0) and (3*x - 4*y + 5> 0) #self.spec.eval_py(env) REPLACED HERE - DON'T WANT ORIGINAL SPECIFICATION
                 if res:
                     Ts.append( env )
                 else:
                     Fs.append( env )
-        #print("The Ts are " + str(Ts) + " and the Fs are " + str(Fs))
+        # print("The Ts are " + str(Ts) + " and the Fs are " + str(Fs))
         return (Ts, Fs)
 
     def dump_all_tests(self):
